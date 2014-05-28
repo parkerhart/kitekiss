@@ -1,0 +1,7 @@
+<h1>I've run <%= @total_distance %> miles so far! Let's go!</h1>
+
+<ul>
+	<% @runs.each do |run| %>
+		<li><%= link_to "#{run.miles} miles on #{run.date}", run %></li>
+	<% end %>
+</ul>
