@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"KiteKiss"
+(A web application for the  daily jogger in us all...!) 
 
-Things you may want to cover:
+GA WDI WDC May 30, 2014 -- Project 1
 
-* Ruby version
+Overview
 
-* System dependencies
+KiteKiss is a web application that allows you to log daily runs. The application has no minimum requirements and is avaliable to the public. Logged in users can save / delete their daily runs in their profile. 
 
-* Configuration
+Technologies Used
 
-* Database creation
+Ruby 2.1.1
+Ruby on Rails 4.1.1p76
+PostgreSQL Database
+Authentication & Authorization using bcrypt-ruby
+User Stories
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+A full list of user stories can be found by looking at this Pivotal Tracker Project
