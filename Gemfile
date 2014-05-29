@@ -36,6 +36,7 @@ group :development, :test do
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'ffaker'
+  gem 'bcrypt', '~> 3.1.7'
 end
 
 
