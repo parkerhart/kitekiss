@@ -2,6 +2,8 @@
 
 <div class="form_user">
 <p class="tile"><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+<p class="tile"><%= link_to "Runs", runs_path(@user) %></p>
+<p class="tile"><%= link_to "Add a Run", new_run_path(@user) %></p>
 
 <p>Account Created: <%= @user.created_at%></p>
 <p>Account Update on: <%= @user.updated_at%></p>
