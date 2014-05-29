@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kitekiss</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>KiteKiss</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Exo:900' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= link_to "Home", root_path %>
-<%= link_to "All Runs", runs_path %>
-<%= link_to "Log a run", new_run_path %>
+<div class="header">
+<header>
+<!--   <img src="/assets/logo.png"> -->
+<p><%= link_to "home", root_path %></p>
+<p><%= link_to "join", new_user_path %></p>
+<p><%= link_to "my account", user_path(User.find_by(id: session[:user_id]))unless session[:user_id].nil? %></p>
+<p><%= link_to("login","/login") if session[:user_id].nil? %></p>
+<p><%= link_to("logout #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete") unless session[:user_id].nil? %></p>
 
-<%= render 'common/signout' %>
+
+</header>
+</div>
+
+
 
 <%= yield %>
 
+
 </body>
 </html>
+
