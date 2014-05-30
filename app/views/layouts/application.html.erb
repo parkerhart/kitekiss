@@ -12,7 +12,7 @@
 
 <div class="header">
 <header>
-<!--   <img src="/assets/logo.png"> -->
+<!--   <img src="/assets/logo.ico"> -->
 <p><%= link_to "home", root_path %></p>
 <p><%= link_to "join", new_user_path %></p>
 <p><%= link_to "my account", user_path(User.find_by(id: session[:user_id]))unless session[:user_id].nil? %></p>
@@ -30,6 +30,10 @@
 
 </body>
 <footer>
+	 <ul>
+      <li>&copy; kitekiss.com</li>
+    </ul>
+<!-- 	<img src="/assets/logo.ico"> -->
 	<%= render 'common/signout' %>
 </footer>
 </html>
